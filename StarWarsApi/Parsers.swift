@@ -29,23 +29,17 @@ class Parsers: NSObject {
         
         let listPeopleVO = ListPeopleVO()
         
-        do
+        let json = JSON(value)
+        
+        let results = json["results"].arrayValue
+            
+        for result in results
         {
-            let json = JSON(value)
-            
-            let results = json["results"].arrayValue
-            
-            for result in results
-            {
-                let peopleVO = PeopleVO()
+            let peopleVO = PeopleVO()
                 
-                peopleVO.name = result["name"].stringValue
+            peopleVO.name = result["name"].stringValue
                 
-                listPeopleVO.peopleArray.append(peopleVO)
-            }
-            
-        } catch {
-            print("Erro jason")
+            listPeopleVO.peopleArray.append(peopleVO)
         }
         
         return listPeopleVO
