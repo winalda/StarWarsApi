@@ -8,12 +8,11 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 
 protocol WSCallerDelegate: class
 {
-    func didReceiveData(data: NSData, ws:WebService)
-    func didReceiveError(error: NSError, ws:WebService)
+    func didReceiveData(value: Any, ws:WebService)
+    func didReceiveError(error: Error, ws:WebService)
 }
 
 class WSCaller: NSObject
@@ -33,16 +32,14 @@ class WSCaller: NSObject
                 
                 if let value = respose.result.value
                 {
-                    let json = JSON(value)
-                    
-                    print(json)
+                    self.delegate.didReceiveData(value: value, ws: ws)
                 }
                 
                 break
                 
             case .failure(let error):
                 
-                print(error)
+                self.delegate.didReceiveError(error: error, ws: ws)
                 
                 break
             }

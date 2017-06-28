@@ -7,40 +7,48 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Parsers: NSObject {
 
-    public func parseInfo(data: NSData, ws:WebService)
+    public func parseInfo(data: Any, ws:WebService) -> Any
     {
-        switch ws
+    
+        if ws == .WS_PEOPLE
         {
-            case .WS_PEOPLE:
-                self.parsePeople(data: data)
-            break
+            return self.parsePeople(value: data)
+        }else{
+            let couldBeNil: String? = nil
+            let any: Any = couldBeNil as Any
+            return any
         }
     }
     
-    private func parsePeople(data: NSData)
+    private func parsePeople(value: Any) -> ListPeopleVO
     {
+        
+        let listPeopleVO = ListPeopleVO()
+        
         do
         {
-            //var peopleVO = PeopleVO()
+            let json = JSON(value)
             
-            let parsedData = try JSONSerialization.jsonObject(with: data as Data) as! [String:Any]
+            let results = json["results"].arrayValue
             
-            let arrayPeple = parsedData["results"] as! [NSArray:Any]
-            
-            print("\(arrayPeple)")
-            
-            /*for value in arrayPeple
+            for result in results
             {
-                peopleVO.name = value["name"]
-            }*/
+                let peopleVO = PeopleVO()
+                
+                peopleVO.name = result["name"].stringValue
+                
+                listPeopleVO.peopleArray.append(peopleVO)
+            }
             
-            
-        } catch let error as NSError {
-            print(error)
+        } catch {
+            print("Erro jason")
         }
+        
+        return listPeopleVO
     }
     
 }

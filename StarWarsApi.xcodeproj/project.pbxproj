@@ -13,6 +13,7 @@
 		CC5186011EF37D9300ECB6A2 /* WebServicesFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5186001EF37D9300ECB6A2 /* WebServicesFacade.swift */; };
 		CC5186061EF3894400ECB6A2 /* Parsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5186051EF3894400ECB6A2 /* Parsers.swift */; };
 		CC51860A1EF38B4100ECB6A2 /* PeopleVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5186091EF38B4100ECB6A2 /* PeopleVO.swift */; };
+		CC96BA731F035BF300682E4C /* ListPeopleVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96BA721F035BF200682E4C /* ListPeopleVO.swift */; };
 		CCA233491EF0E636006D49C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA233481EF0E635006D49C7 /* AppDelegate.swift */; };
 		CCA2334B1EF0E636006D49C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2334A1EF0E636006D49C7 /* ViewController.swift */; };
 		CCA233501EF0E639006D49C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA2334F1EF0E639006D49C7 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		CC5186001EF37D9300ECB6A2 /* WebServicesFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServicesFacade.swift; sourceTree = "<group>"; };
 		CC5186051EF3894400ECB6A2 /* Parsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsers.swift; sourceTree = "<group>"; };
 		CC5186091EF38B4100ECB6A2 /* PeopleVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleVO.swift; sourceTree = "<group>"; };
+		CC96BA721F035BF200682E4C /* ListPeopleVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPeopleVO.swift; sourceTree = "<group>"; };
 		CCA233451EF0E635006D49C7 /* StarWarsApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA233481EF0E635006D49C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCA2334A1EF0E636006D49C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				CC5186091EF38B4100ECB6A2 /* PeopleVO.swift */,
+				CC96BA721F035BF200682E4C /* ListPeopleVO.swift */,
 			);
 			name = VO;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				CC51860A1EF38B4100ECB6A2 /* PeopleVO.swift in Sources */,
 				CCA233491EF0E636006D49C7 /* AppDelegate.swift in Sources */,
 				CC5186011EF37D9300ECB6A2 /* WebServicesFacade.swift in Sources */,
+				CC96BA731F035BF300682E4C /* ListPeopleVO.swift in Sources */,
 				CC5185FF1EF22F3F00ECB6A2 /* WSCaller.swift in Sources */,
 				CC5186061EF3894400ECB6A2 /* Parsers.swift in Sources */,
 				CC5185FB1EF22D5000ECB6A2 /* Constans.swift in Sources */,

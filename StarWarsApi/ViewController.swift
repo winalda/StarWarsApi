@@ -1,4 +1,4 @@
-//
+
 //  ViewController.swift
 //  StarWarsApi
 //
@@ -11,13 +11,14 @@ import UIKit
 class ViewController: UIViewController, WSCallerDelegate {
 
     var exaple : WebServicesFacade?
+    var listpeopleVO : ListPeopleVO?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         exaple = WebServicesFacade()
         
-        exaple?.getPeopleList(urlList: "http://pokeapi.co/api/v2/pokemon/").delegate = self
+        exaple?.getPeopleList(urlList: "\(Constans.urlDefault)\(Constans.urlPeple)").delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,16 +26,24 @@ class ViewController: UIViewController, WSCallerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-   func didReceiveData(data: NSData, ws:WebService)
+    func didReceiveData(value: Any, ws:WebService)
     {
         let parsers : Parsers = Parsers()
-        parsers.parseInfo(data: data, ws: ws)
-        print("Hola YES")
+        listpeopleVO = parsers.parseInfo(data: value, ws: ws) as? ListPeopleVO
+        
+        for people in (listpeopleVO?.peopleArray)!
+        {
+            if let value = people.name
+            {
+                print(value)
+            }
+        }
+        
     }
     
-    func didReceiveError(error: NSError, ws:WebService)
+    func didReceiveError(error: Error, ws:WebService)
     {
-        print("Hola NO")
+        print(error)
     }
 
 
