@@ -1,0 +1,35 @@
+//
+//  PeopleTableViewCell.swift
+//  StarWarsApi
+//
+//  Created by Erick Alberto Morales Ledesma on 28/06/17.
+//  Copyright © 2017 Erick Alberto Morales Ledesma. All rights reserved.
+//
+
+import UIKit
+
+class PeopleTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var lblName : UILabel?
+    @IBOutlet weak var lblNum : UILabel?
+    @IBOutlet weak var viewCell : UIView?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        self.viewCell?.layer.borderWidth = 2.0
+        self.viewCell?.layer.borderColor = UIColor.black.cgColor
+        self.viewCell?.layer.cornerRadius = 8.0
+        
+        self.viewCell?.layer.shadowOffset = CGSize(width: 0, height: 4.5)
+        self.viewCell?.layer.shadowRadius = 8.5
+        self.viewCell?.layer.shadowOpacity = 4.0
+        // Configure the view for the selected state
+    }
+    
+}

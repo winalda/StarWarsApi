@@ -14,6 +14,8 @@
 		CC5186061EF3894400ECB6A2 /* Parsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5186051EF3894400ECB6A2 /* Parsers.swift */; };
 		CC51860A1EF38B4100ECB6A2 /* PeopleVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5186091EF38B4100ECB6A2 /* PeopleVO.swift */; };
 		CC96BA731F035BF300682E4C /* ListPeopleVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96BA721F035BF200682E4C /* ListPeopleVO.swift */; };
+		CC96BA781F04963E00682E4C /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96BA761F04963E00682E4C /* PeopleTableViewCell.swift */; };
+		CC96BA791F04963E00682E4C /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC96BA771F04963E00682E4C /* PeopleTableViewCell.xib */; };
 		CCA233491EF0E636006D49C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA233481EF0E635006D49C7 /* AppDelegate.swift */; };
 		CCA2334B1EF0E636006D49C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2334A1EF0E636006D49C7 /* ViewController.swift */; };
 		CCA233501EF0E639006D49C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA2334F1EF0E639006D49C7 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		CC5186051EF3894400ECB6A2 /* Parsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsers.swift; sourceTree = "<group>"; };
 		CC5186091EF38B4100ECB6A2 /* PeopleVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleVO.swift; sourceTree = "<group>"; };
 		CC96BA721F035BF200682E4C /* ListPeopleVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPeopleVO.swift; sourceTree = "<group>"; };
+		CC96BA761F04963E00682E4C /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
+		CC96BA771F04963E00682E4C /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeopleTableViewCell.xib; sourceTree = "<group>"; };
 		CCA233451EF0E635006D49C7 /* StarWarsApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA233481EF0E635006D49C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCA2334A1EF0E636006D49C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,30 @@
 			name = VO;
 			sourceTree = "<group>";
 		};
+		CC96BA741F0495F300682E4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CCA2335E1EF219A6006D49C7 /* ViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CC96BA751F04960F00682E4C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC96BA771F04963E00682E4C /* PeopleTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		CC96BA7A1F04965300682E4C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC96BA761F04963E00682E4C /* PeopleTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		CCA2333C1EF0E632006D49C7 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +192,7 @@
 		CCA2335B1EF0E699006D49C7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CC96BA7A1F04965300682E4C /* Cell */,
 				CCA2334A1EF0E636006D49C7 /* ViewController.swift */,
 			);
 			name = ViewController;
@@ -181,7 +210,8 @@
 		CCA2335D1EF2198B006D49C7 /* xib */ = {
 			isa = PBXGroup;
 			children = (
-				CCA2335E1EF219A6006D49C7 /* ViewController.xib */,
+				CC96BA751F04960F00682E4C /* Cell */,
+				CC96BA741F0495F300682E4C /* Views */,
 			);
 			name = xib;
 			sourceTree = "<group>";
@@ -249,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC96BA791F04963E00682E4C /* PeopleTableViewCell.xib in Resources */,
 				CCA233531EF0E63A006D49C7 /* LaunchScreen.storyboard in Resources */,
 				CCA2335F1EF219A6006D49C7 /* ViewController.xib in Resources */,
 				CCA233501EF0E639006D49C7 /* Assets.xcassets in Resources */,
@@ -312,6 +343,7 @@
 			files = (
 				CCA2334B1EF0E636006D49C7 /* ViewController.swift in Sources */,
 				CC51860A1EF38B4100ECB6A2 /* PeopleVO.swift in Sources */,
+				CC96BA781F04963E00682E4C /* PeopleTableViewCell.swift in Sources */,
 				CCA233491EF0E636006D49C7 /* AppDelegate.swift in Sources */,
 				CC5186011EF37D9300ECB6A2 /* WebServicesFacade.swift in Sources */,
 				CC96BA731F035BF300682E4C /* ListPeopleVO.swift in Sources */,
