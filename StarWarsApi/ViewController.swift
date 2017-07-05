@@ -11,18 +11,18 @@ import UIKit
 class ViewController: UIViewController, WSCallerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView : UITableView?
-    var exaple : WebServicesFacade?
+    var webServiceFacade : WebServicesFacade?
     var listpeopleVO : ListPeopleVO?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        exaple = WebServicesFacade()
+        webServiceFacade = WebServicesFacade()
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
         self.title = "People"
         
-        exaple?.getPeopleList(urlList: "\(Constans.urlDefault)\(Constans.urlPeple)").delegate = self
+        webServiceFacade?.getPeopleList(urlList: "\(Constans.urlDefault)\(Constans.urlPeple)").delegate = self
         
         self.tableView?.register(UINib(nibName:"PeopleTableViewCell", bundle:nil), forCellReuseIdentifier:"PeopleTableViewCell")
     }
@@ -79,7 +79,7 @@ class ViewController: UIViewController, WSCallerDelegate, UITableViewDelegate, U
 
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 80
+        return 75
     }
 }
 

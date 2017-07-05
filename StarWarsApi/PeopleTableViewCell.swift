@@ -26,9 +26,9 @@ class PeopleTableViewCell: UITableViewCell {
         self.viewCell?.layer.borderColor = UIColor.black.cgColor
         self.viewCell?.layer.cornerRadius = 8.0
         
-        self.viewCell?.layer.shadowOffset = CGSize(width: 0, height: 4.5)
-        self.viewCell?.layer.shadowRadius = 8.5
-        self.viewCell?.layer.shadowOpacity = 4.0
+        self.viewCell?.layer.shadowOffset = CGSize(width: 0, height: 2.5)
+        self.viewCell?.layer.shadowRadius = 3.5
+        self.viewCell?.layer.shadowOpacity = 2.0
         // Configure the view for the selected state
     }
     
