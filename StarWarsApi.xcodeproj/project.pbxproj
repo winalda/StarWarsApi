@@ -21,6 +21,8 @@
 		CCA233501EF0E639006D49C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA2334F1EF0E639006D49C7 /* Assets.xcassets */; };
 		CCA233531EF0E63A006D49C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA233511EF0E63A006D49C7 /* LaunchScreen.storyboard */; };
 		CCA2335F1EF219A6006D49C7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCA2335E1EF219A6006D49C7 /* ViewController.xib */; };
+		CCD8DC351F0DD72300287068 /* FilmVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD8DC341F0DD72300287068 /* FilmVO.swift */; };
+		CCD8DC371F0DDC3900287068 /* FilmsListVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD8DC361F0DDC3900287068 /* FilmsListVO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		CCA233521EF0E63A006D49C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCA233541EF0E63B006D49C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCA2335E1EF219A6006D49C7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		CCD8DC341F0DD72300287068 /* FilmVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmVO.swift; sourceTree = "<group>"; };
+		CCD8DC361F0DDC3900287068 /* FilmsListVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsListVO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 			children = (
 				CC5186091EF38B4100ECB6A2 /* PeopleVO.swift */,
 				CC96BA721F035BF200682E4C /* ListPeopleVO.swift */,
+				CCD8DC341F0DD72300287068 /* FilmVO.swift */,
+				CCD8DC361F0DDC3900287068 /* FilmsListVO.swift */,
 			);
 			name = VO;
 			sourceTree = "<group>";
@@ -342,7 +348,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCA2334B1EF0E636006D49C7 /* ViewController.swift in Sources */,
+				CCD8DC371F0DDC3900287068 /* FilmsListVO.swift in Sources */,
 				CC51860A1EF38B4100ECB6A2 /* PeopleVO.swift in Sources */,
+				CCD8DC351F0DD72300287068 /* FilmVO.swift in Sources */,
 				CC96BA781F04963E00682E4C /* PeopleTableViewCell.swift in Sources */,
 				CCA233491EF0E636006D49C7 /* AppDelegate.swift in Sources */,
 				CC5186011EF37D9300ECB6A2 /* WebServicesFacade.swift in Sources */,

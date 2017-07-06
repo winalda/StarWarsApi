@@ -11,6 +11,7 @@ import UIKit
 class PeopleVO: NSObject {
 
     public var name: String?
+    public var url_people: String?
     
     
 }

@@ -10,6 +10,6 @@ import UIKit
 
 class ListPeopleVO: NSObject {
     
-    var peopleArray: Array <PeopleVO> = []
+   public var peopleArray: Array <PeopleVO> = []
 
 }

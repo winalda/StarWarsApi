@@ -24,4 +24,17 @@ class WebServicesFacade: NSObject {
         return wsCaller
     }
     
+    public func getFilmsList(urlList: String) -> WSCaller
+    {
+        let wsCaller = WSCaller()
+        
+        let url = URL(string: urlList)!
+        
+        let alamofire = Alamofire.request(url, method: .get)
+        
+        wsCaller.executeService(alamofire: alamofire, ws: .WS_FILMS)
+        
+        return wsCaller
+    }
+    
 }
