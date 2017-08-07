@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8D1BF0C34E7C25906AB02422 /* Pods_StarWarsApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38F817C5732EBD91E7D7E6 /* Pods_StarWarsApi.framework */; };
+		CC30D0AA1F12D4A5009586B7 /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC30D0A91F12D4A5009586B7 /* Starjout.ttf */; };
+		CC30D0AC1F12D53F009586B7 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30D0AB1F12D53F009586B7 /* Utils.swift */; };
+		CC30D0AE1F12EA0E009586B7 /* Stjldbl2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC30D0AD1F12EA0E009586B7 /* Stjldbl2.ttf */; };
+		CC30D0B01F12EAF2009586B7 /* STJEDISE.TTF in Resources */ = {isa = PBXBuildFile; fileRef = CC30D0AF1F12EAF2009586B7 /* STJEDISE.TTF */; };
+		CC326E681F1B0E5900C0DD7F /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC326E671F1B0E5900C0DD7F /* Styles.swift */; };
 		CC5185FB1EF22D5000ECB6A2 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5185FA1EF22D5000ECB6A2 /* Constans.swift */; };
 		CC5185FF1EF22F3F00ECB6A2 /* WSCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5185FE1EF22F3F00ECB6A2 /* WSCaller.swift */; };
 		CC5186011EF37D9300ECB6A2 /* WebServicesFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5186001EF37D9300ECB6A2 /* WebServicesFacade.swift */; };
@@ -21,6 +26,10 @@
 		CCA233501EF0E639006D49C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA2334F1EF0E639006D49C7 /* Assets.xcassets */; };
 		CCA233531EF0E63A006D49C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA233511EF0E63A006D49C7 /* LaunchScreen.storyboard */; };
 		CCA2335F1EF219A6006D49C7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCA2335E1EF219A6006D49C7 /* ViewController.xib */; };
+		CCCE67111F1C3DE500C4096A /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCCE67101F1C3DE500C4096A /* Starjedi.ttf */; };
+		CCCE67131F1C3E1500C4096A /* Starjhol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCCE67121F1C3E1500C4096A /* Starjhol.ttf */; };
+		CCCE67171F1C44C700C4096A /* DetailFilmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCCE67161F1C44C700C4096A /* DetailFilmViewController.xib */; };
+		CCCE671B1F1C45B400C4096A /* DetailFilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE671A1F1C45B400C4096A /* DetailFilmViewController.swift */; };
 		CCD8DC351F0DD72300287068 /* FilmVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD8DC341F0DD72300287068 /* FilmVO.swift */; };
 		CCD8DC371F0DDC3900287068 /* FilmsListVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD8DC361F0DDC3900287068 /* FilmsListVO.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +38,11 @@
 		7B38F817C5732EBD91E7D7E6 /* Pods_StarWarsApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D7B961E8BFD3D49E77B89D /* Pods-StarWarsApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsApi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsApi/Pods-StarWarsApi.debug.xcconfig"; sourceTree = "<group>"; };
 		89524EB4E5FF3F7D2ED8707C /* Pods-StarWarsApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsApi.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsApi/Pods-StarWarsApi.release.xcconfig"; sourceTree = "<group>"; };
+		CC30D0A91F12D4A5009586B7 /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
+		CC30D0AB1F12D53F009586B7 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CC30D0AD1F12EA0E009586B7 /* Stjldbl2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stjldbl2.ttf; sourceTree = "<group>"; };
+		CC30D0AF1F12EAF2009586B7 /* STJEDISE.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STJEDISE.TTF; sourceTree = "<group>"; };
+		CC326E671F1B0E5900C0DD7F /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		CC5185FA1EF22D5000ECB6A2 /* Constans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		CC5185FE1EF22F3F00ECB6A2 /* WSCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCaller.swift; sourceTree = "<group>"; };
 		CC5186001EF37D9300ECB6A2 /* WebServicesFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServicesFacade.swift; sourceTree = "<group>"; };
@@ -44,6 +58,10 @@
 		CCA233521EF0E63A006D49C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCA233541EF0E63B006D49C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCA2335E1EF219A6006D49C7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		CCCE67101F1C3DE500C4096A /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		CCCE67121F1C3E1500C4096A /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
+		CCCE67161F1C44C700C4096A /* DetailFilmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailFilmViewController.xib; sourceTree = "<group>"; };
+		CCCE671A1F1C45B400C4096A /* DetailFilmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFilmViewController.swift; sourceTree = "<group>"; };
 		CCD8DC341F0DD72300287068 /* FilmVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmVO.swift; sourceTree = "<group>"; };
 		CCD8DC361F0DDC3900287068 /* FilmsListVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsListVO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,10 +95,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CC30D0A81F12D486009586B7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CCCE67121F1C3E1500C4096A /* Starjhol.ttf */,
+				CCCE67101F1C3DE500C4096A /* Starjedi.ttf */,
+				CC30D0AD1F12EA0E009586B7 /* Stjldbl2.ttf */,
+				CC30D0A91F12D4A5009586B7 /* Starjout.ttf */,
+				CC30D0AF1F12EAF2009586B7 /* STJEDISE.TTF */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		CC5185F91EF22D0700ECB6A2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				CC5185FA1EF22D5000ECB6A2 /* Constans.swift */,
+				CC30D0AB1F12D53F009586B7 /* Utils.swift */,
+				CC326E671F1B0E5900C0DD7F /* Styles.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -135,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				CCA2335E1EF219A6006D49C7 /* ViewController.xib */,
+				CCCE67161F1C44C700C4096A /* DetailFilmViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -200,6 +233,7 @@
 			children = (
 				CC96BA7A1F04965300682E4C /* Cell */,
 				CCA2334A1EF0E636006D49C7 /* ViewController.swift */,
+				CCCE671A1F1C45B400C4096A /* DetailFilmViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -207,6 +241,7 @@
 		CCA2335C1EF0E6A9006D49C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CC30D0A81F12D486009586B7 /* Fonts */,
 				CCA2335D1EF2198B006D49C7 /* xib */,
 				CCA2334F1EF0E639006D49C7 /* Assets.xcassets */,
 			);
@@ -288,7 +323,13 @@
 				CC96BA791F04963E00682E4C /* PeopleTableViewCell.xib in Resources */,
 				CCA233531EF0E63A006D49C7 /* LaunchScreen.storyboard in Resources */,
 				CCA2335F1EF219A6006D49C7 /* ViewController.xib in Resources */,
+				CCCE67131F1C3E1500C4096A /* Starjhol.ttf in Resources */,
+				CC30D0B01F12EAF2009586B7 /* STJEDISE.TTF in Resources */,
+				CCCE67111F1C3DE500C4096A /* Starjedi.ttf in Resources */,
+				CC30D0AA1F12D4A5009586B7 /* Starjout.ttf in Resources */,
 				CCA233501EF0E639006D49C7 /* Assets.xcassets in Resources */,
+				CC30D0AE1F12EA0E009586B7 /* Stjldbl2.ttf in Resources */,
+				CCCE67171F1C44C700C4096A /* DetailFilmViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +389,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCA2334B1EF0E636006D49C7 /* ViewController.swift in Sources */,
+				CCCE671B1F1C45B400C4096A /* DetailFilmViewController.swift in Sources */,
 				CCD8DC371F0DDC3900287068 /* FilmsListVO.swift in Sources */,
+				CC326E681F1B0E5900C0DD7F /* Styles.swift in Sources */,
 				CC51860A1EF38B4100ECB6A2 /* PeopleVO.swift in Sources */,
 				CCD8DC351F0DD72300287068 /* FilmVO.swift in Sources */,
 				CC96BA781F04963E00682E4C /* PeopleTableViewCell.swift in Sources */,
@@ -358,6 +401,7 @@
 				CC5185FF1EF22F3F00ECB6A2 /* WSCaller.swift in Sources */,
 				CC5186061EF3894400ECB6A2 /* Parsers.swift in Sources */,
 				CC5185FB1EF22D5000ECB6A2 /* Constans.swift in Sources */,
+				CC30D0AC1F12D53F009586B7 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

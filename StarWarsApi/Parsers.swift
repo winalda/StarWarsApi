@@ -61,6 +61,9 @@ class Parsers: NSObject {
             
             filmVO.title = result["title"].stringValue
             filmVO.episode_id = result["episode_id"].intValue
+            filmVO.director = result["director"].stringValue
+            filmVO.opening_crawl = result["opening_crawl"].stringValue
+            filmVO.release_data = result["release_date"].stringValue
             
             let characters = result["characters"].arrayValue
             

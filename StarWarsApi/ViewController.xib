@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,29 +11,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="StarWarsApi" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="qOe-pN-YWF" id="09U-9H-eGn"/>
+                <outlet property="tableView" destination="d1e-RI-FpA" id="2q2-Nu-zpo"/>
                 <outlet property="view" destination="iN0-l3-epB" id="BSn-Tq-qFK"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qOe-pN-YWF">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startwars" translatesAutoresizingMaskIntoConstraints="NO" id="yEU-gy-8si" customClass="starwars">
+                    <rect key="frame" x="0.0" y="64" width="320" height="127"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-RI-FpA">
+                    <rect key="frame" x="16" y="180" width="288" height="388"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="qOe-pN-YWF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="25k-XS-Pqe"/>
-                <constraint firstAttribute="trailing" secondItem="qOe-pN-YWF" secondAttribute="trailing" id="7qK-DH-wV6"/>
-                <constraint firstAttribute="bottom" secondItem="qOe-pN-YWF" secondAttribute="bottom" id="W7I-W1-DDp"/>
-                <constraint firstItem="qOe-pN-YWF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lW6-UU-x6b"/>
+                <constraint firstAttribute="bottom" secondItem="yEU-gy-8si" secondAttribute="bottom" constant="377" id="Dth-Fy-SJi"/>
+                <constraint firstItem="d1e-RI-FpA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Lbx-Q2-ziy"/>
+                <constraint firstItem="yEU-gy-8si" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="S2G-iM-0dW"/>
+                <constraint firstAttribute="trailing" secondItem="d1e-RI-FpA" secondAttribute="trailing" constant="16" id="X5l-jG-YJ3"/>
+                <constraint firstAttribute="bottom" secondItem="d1e-RI-FpA" secondAttribute="bottom" id="gFl-WD-OWj"/>
+                <constraint firstAttribute="trailing" secondItem="yEU-gy-8si" secondAttribute="trailing" id="haS-8n-9m0"/>
+                <constraint firstItem="d1e-RI-FpA" firstAttribute="top" secondItem="yEU-gy-8si" secondAttribute="bottom" constant="-11" id="kbf-BV-VGY"/>
+                <constraint firstItem="yEU-gy-8si" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="l6T-Q3-ceR"/>
             </constraints>
-            <point key="canvasLocation" x="35.5" y="53.5"/>
+            <point key="canvasLocation" x="34" y="52"/>
         </view>
     </objects>
+    <resources>
+        <image name="startwars" width="1920" height="1080"/>
+    </resources>
 </document>

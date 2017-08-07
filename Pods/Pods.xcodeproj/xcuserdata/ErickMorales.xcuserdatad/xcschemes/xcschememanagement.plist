@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-StarWarsApi.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +27,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>11B60443541F35DA21763F400F950E50</key>
+		<key>2E9AA7F18A50A89CB528ECC06B8FC0BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>151E1B86B8444FD63C04BCD78963250C</key>
+		<key>74C5EF99261A771CF92B26FA16CFE7F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76BD4592010354D6C23D6ECCA20D83A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -9,5 +9,6 @@ target 'StarWarsApi' do
 	
   pod 'SwiftyJSON', :git => 'https://github.com/acegreen/SwiftyJSON.git', :branch => 'swift3'
   pod 'Alamofire', '~> 4.0'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
 end

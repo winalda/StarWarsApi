@@ -12,22 +12,30 @@ class ViewController: UIViewController, WSCallerDelegate, UITableViewDelegate, U
 
     @IBOutlet weak var tableView : UITableView?
     private var webServiceFacade : WebServicesFacade?
-    //var listpeopleVO : ListPeopleVO?
     private var filmsListVO : FilmsListVO?
+    private var contCell : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         webServiceFacade = WebServicesFacade()
+        
+        self.contCell = 0
+        
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
-        self.title = "People"
+
+        self.title = "Star Wars Films"
         
-        //webServiceFacade?.getPeopleList(urlList: "\(Constans.urlDefault)\(Constans.urlPeple)").delegate = self
-        
+        self.navigationController?.navigationBar.barTintColor = UIColor.flatBlack
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.flatYellow]
+
+        self.tableView?.backgroundColor = UIColor.black
         webServiceFacade?.getFilmsList(urlList: "\(Constans.urlDefault)\(Constans.urlFilms)").delegate = self
         
         self.tableView?.register(UINib(nibName:"PeopleTableViewCell", bundle:nil), forCellReuseIdentifier:"PeopleTableViewCell")
+        
+        self.view.backgroundColor = UIColor.black
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,12 +45,6 @@ class ViewController: UIViewController, WSCallerDelegate, UITableViewDelegate, U
     
     func didReceiveData(value: Any, ws:WebService)
     {
-        /*let parsers : Parsers = Parsers()
-        listpeopleVO = parsers.parseInfo(data: value, ws: ws) as? ListPeopleVO
-        
-        DispatchQueue.main.async {
-            self.tableView?.reloadData()
-        }*/
         
         if ws == .WS_FILMS
         {
@@ -64,8 +66,7 @@ class ViewController: UIViewController, WSCallerDelegate, UITableViewDelegate, U
 
     //UITableViewDataSource
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    func numberOfSections(in tableView: UITableView) -> Int {
         if let count = filmsListVO?.results.count
         {
             return count
@@ -74,27 +75,68 @@ class ViewController: UIViewController, WSCallerDelegate, UITableViewDelegate, U
         }
     }
     
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 1
+    }
+    
+    //Tamaño de la celda
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 75.0;
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let rect = CGRect(x: 15, y: 0, width: ((self.tableView?.frame.size.width))!-15, height: 15.0)
+        
+        let viewHader = UIView.init(frame: rect)
+        
+        viewHader.backgroundColor = UIColor.clear
+        
+        return viewHader
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 15.0
+    }
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell: PeopleTableViewCell
+        var cell: PeopleTableViewCell
         let identifierNameCell: String = "PeopleTableViewCell"
         
         cell = tableView.dequeueReusableCell(withIdentifier: identifierNameCell) as! PeopleTableViewCell
         
-        if let value = filmsListVO?.results[indexPath.row]
+        cell.backgroundColor = UIColor.flatRed
+        
+        Styles().setTableCellBorderAndShadow(view: cell)
+        
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+        
+        if let count = filmsListVO?.results.count
         {
-            cell.lblName?.text = value.title
-            cell.lblNum?.text = String(Int(value.episode_id!))
+            if self.contCell! < count
+            {
+                if let value = filmsListVO?.results[self.contCell!]
+                {
+                    cell.lblName?.text = value.title
+                    
+                    cell.lblNum?.text = "Episode \(String(Int(value.episode_id!)))"
+                }
+                
+                self.contCell = self.contCell! + 1
+            }
         }
         
         return cell
     }
     
     //UITableViewDelegate
-
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return 75
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailFilm = DetailFilmViewController()
+        self.navigationController?.popToViewController(detailFilm, animated: true)
     }
 }
 
