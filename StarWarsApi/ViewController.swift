@@ -135,8 +135,8 @@ class ViewController: UIViewController, WSCallerDelegate, UITableViewDelegate, U
     //UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailFilm = DetailFilmViewController()
-        self.navigationController?.popToViewController(detailFilm, animated: true)
+        let detailFilm = DetailFilmViewController(nibName: "DetailFilmViewController", bundle: Bundle.main)
+        self.navigationController?.pushViewController(detailFilm, animated: true)
     }
 }
 
