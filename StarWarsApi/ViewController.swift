@@ -31,6 +31,8 @@ class ViewController: UIViewController, WSCallerDelegate, UITableViewDelegate, U
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.flatYellow]
 
         self.tableView?.backgroundColor = UIColor.black
+        
+        HUD_ObjectiveC.showProgressHUDView(self.view)
         webServiceFacade?.getFilmsList(urlList: "\(Constans.urlDefault)\(Constans.urlFilms)").delegate = self
         
         self.tableView?.register(UINib(nibName:"PeopleTableViewCell", bundle:nil), forCellReuseIdentifier:"PeopleTableViewCell")
@@ -45,6 +47,8 @@ class ViewController: UIViewController, WSCallerDelegate, UITableViewDelegate, U
     
     func didReceiveData(value: Any, ws:WebService)
     {
+        
+        HUD_ObjectiveC.hidenProgressHUDView(self.view)
         
         if ws == .WS_FILMS
         {
@@ -69,8 +73,10 @@ class ViewController: UIViewController, WSCallerDelegate, UITableViewDelegate, U
     func numberOfSections(in tableView: UITableView) -> Int {
         if let count = filmsListVO?.results.count
         {
+            self.tableView?.isHidden = false;
             return count
         }else{
+            self.tableView?.isHidden = true;
             return 0
         }
     }
@@ -111,6 +117,8 @@ class ViewController: UIViewController, WSCallerDelegate, UITableViewDelegate, U
         cell.backgroundColor = UIColor.flatRed
         
         Styles().setTableCellBorderAndShadow(view: cell)
+        
+        cell.selectionStyle = UITableViewCellSelectionStyle.none;
         
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         

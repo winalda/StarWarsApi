@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,6 +20,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailFilmViewController" customModule="StarWarsApi" customModuleProvider="target">
             <connections>
+                <outlet property="imageFilm" destination="Mnr-fx-SUH" id="30M-0g-VWu"/>
+                <outlet property="lblDate" destination="fbr-RE-01s" id="geP-bf-cn2"/>
+                <outlet property="lblDirector" destination="iV1-g2-ifn" id="k34-ge-YpU"/>
+                <outlet property="txtViewDescriptionFilm" destination="9uS-mH-rjB" id="gEM-HD-i4Z"/>
+                <outlet property="txtViewEpisodeNum" destination="Y2Q-h5-tGa" id="dOo-Zb-74q"/>
+                <outlet property="txtViewTitleFile" destination="dv9-ne-aiC" id="pbU-cQ-Tar"/>
                 <outlet property="view" destination="CvM-Zr-Qew" id="wgu-Ej-fiN"/>
                 <outlet property="viewFilm" destination="Mnr-fx-SUH" id="MMK-OK-v7G"/>
             </connections>
@@ -43,22 +49,18 @@
                                 </imageView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Episode 7" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Y2Q-h5-tGa">
                                     <rect key="frame" x="141" y="14" width="221" height="55"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="55" id="GUu-Sa-fbH"/>
                                     </constraints>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The Force Awakens" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dv9-ne-aiC">
                                     <rect key="frame" x="141" y="77" width="221" height="82"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="221" id="Bku-SF-29m"/>
                                         <constraint firstAttribute="height" constant="82" id="DWv-jG-G0i"/>
                                     </constraints>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
@@ -77,11 +79,10 @@
                         </view>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9uS-mH-rjB">
                             <rect key="frame" x="8" y="220" width="363" height="253"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="253" id="WRb-yU-I96"/>
                             </constraints>
-                            <string key="text">It is a period of civil war.\r\nRebel spaceships, striking\r\nfrom a hidden base, have won\r\ntheir first victory against\r\nthe evil Galactic Empire.\r\n\r\nDuring the battle, Rebel\r\nspies managed to steal secret\r\nplans to the Empire's\r\nultimate weapon, the DEATH\r\nSTAR, an armored space\r\nstation with enough power\r\nto destroy an entire planet.\r\n\r\nPursued by the Empire's\r\nsinister agents, Princess\r\nLeia races home aboard her\r\nstarship, custodian of the\r\nstolen plans that can save her\r\npeople and restore\r\nfreedom to the galaxy....</string>
+                            <mutableString key="text">It is a period of civil war.\r\nRebel spaceships, striking\r\nfrom a hidden base, have won\r\ntheir first victory against\r\nthe evil Galactic Empire.\r\n\r\nDuring the battle, Rebel\r\nspies managed to steal secret\r\nplans to the Empire's\r\nultimate weapon, the DEATH\r\nSTAR, an armored space\r\nstation with enough power\r\nto destroy an entire planet.\r\n\r\nPursued by the Empire's\r\nsinister agents, Princess\r\nLeia races home aboard her\r\nstarship, custodian of the\r\nstolen plans that can save her\r\npeople and restore\r\nfreedom to the galaxy....</mutableString>
                             <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
@@ -95,7 +96,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROi-Pf-RGh">
-                                    <rect key="frame" x="102" y="110" width="163" height="24"/>
+                                    <rect key="frame" x="102.5" y="110" width="162.5" height="24"/>
                                     <fontDescription key="fontDescription" name="StarJediHollow" family="Star Jedi Hollow" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -109,7 +110,7 @@
                                     <state key="normal" title="Characters"/>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="George Lucas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iV1-g2-ifn">
-                                    <rect key="frame" x="102" y="8" width="164" height="32"/>
+                                    <rect key="frame" x="102.5" y="8" width="163.5" height="32"/>
                                     <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -164,7 +165,7 @@
                 <constraint firstItem="J3R-IJ-vCx" firstAttribute="leading" secondItem="CvM-Zr-Qew" secondAttribute="leading" id="ats-OP-0xy"/>
                 <constraint firstItem="J3R-IJ-vCx" firstAttribute="top" secondItem="CvM-Zr-Qew" secondAttribute="top" id="fhI-cy-x6n"/>
             </constraints>
-            <point key="canvasLocation" x="49" y="159"/>
+            <point key="canvasLocation" x="34.5" y="161.5"/>
         </view>
     </objects>
     <resources>

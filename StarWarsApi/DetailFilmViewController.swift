@@ -12,12 +12,20 @@ class DetailFilmViewController: UIViewController {
 
     @IBOutlet weak var viewFilm : UIImageView!
     
+    @IBOutlet weak var imageFilm : UIImageView!
+    @IBOutlet weak var txtViewTitleFile : UITextView!
+    @IBOutlet weak var txtViewEpisodeNum : UITextView!
+    @IBOutlet weak var txtViewDescriptionFilm : UITextView!
+    @IBOutlet weak var lblDirector : UILabel!
+    @IBOutlet weak var lblDate : UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Film"
 
         viewFilm.image = UIImage(named: "episodio7")
+        self.view.backgroundColor = UIColor.gray
         // Do any additional setup after loading the view.
     }
 

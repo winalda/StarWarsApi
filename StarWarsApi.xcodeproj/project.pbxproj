@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D1BF0C34E7C25906AB02422 /* Pods_StarWarsApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B38F817C5732EBD91E7D7E6 /* Pods_StarWarsApi.framework */; };
+		A70D33011F58C6A600BD1300 /* HUD-ObjectiveC.m in Sources */ = {isa = PBXBuildFile; fileRef = A70D33001F58C6A600BD1300 /* HUD-ObjectiveC.m */; };
 		CC30D0AA1F12D4A5009586B7 /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC30D0A91F12D4A5009586B7 /* Starjout.ttf */; };
 		CC30D0AC1F12D53F009586B7 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30D0AB1F12D53F009586B7 /* Utils.swift */; };
 		CC30D0AE1F12EA0E009586B7 /* Stjldbl2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC30D0AD1F12EA0E009586B7 /* Stjldbl2.ttf */; };
@@ -38,6 +39,9 @@
 		7B38F817C5732EBD91E7D7E6 /* Pods_StarWarsApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D7B961E8BFD3D49E77B89D /* Pods-StarWarsApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsApi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsApi/Pods-StarWarsApi.debug.xcconfig"; sourceTree = "<group>"; };
 		89524EB4E5FF3F7D2ED8707C /* Pods-StarWarsApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsApi.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsApi/Pods-StarWarsApi.release.xcconfig"; sourceTree = "<group>"; };
+		A70D32FE1F58C6A600BD1300 /* StarWarsApi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StarWarsApi-Bridging-Header.h"; sourceTree = "<group>"; };
+		A70D32FF1F58C6A600BD1300 /* HUD-ObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HUD-ObjectiveC.h"; sourceTree = "<group>"; };
+		A70D33001F58C6A600BD1300 /* HUD-ObjectiveC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HUD-ObjectiveC.m"; sourceTree = "<group>"; };
 		CC30D0A91F12D4A5009586B7 /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
 		CC30D0AB1F12D53F009586B7 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		CC30D0AD1F12EA0E009586B7 /* Stjldbl2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stjldbl2.ttf; sourceTree = "<group>"; };
@@ -86,6 +90,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A70D32FD1F58C64F00BD1300 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A70D32FF1F58C6A600BD1300 /* HUD-ObjectiveC.h */,
+				A70D33001F58C6A600BD1300 /* HUD-ObjectiveC.m */,
+				A70D32FE1F58C6A600BD1300 /* StarWarsApi-Bridging-Header.h */,
+			);
+			name = ProgressHUD;
+			sourceTree = "<group>";
+		};
 		B7545F36AF5171B6073D6F1F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +124,7 @@
 		CC5185F91EF22D0700ECB6A2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A70D32FD1F58C64F00BD1300 /* ProgressHUD */,
 				CC5185FA1EF22D5000ECB6A2 /* Constans.swift */,
 				CC30D0AB1F12D53F009586B7 /* Utils.swift */,
 				CC326E671F1B0E5900C0DD7F /* Styles.swift */,
@@ -293,6 +308,7 @@
 					CCA233441EF0E634006D49C7 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 87TEAXQ585;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -342,13 +358,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarWarsApi-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B2BD549DCB0728CE940F742D /* [CP] Copy Pods Resources */ = {
@@ -372,9 +391,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StarWarsApi/Pods-StarWarsApi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -390,6 +418,7 @@
 			files = (
 				CCA2334B1EF0E636006D49C7 /* ViewController.swift in Sources */,
 				CCCE671B1F1C45B400C4096A /* DetailFilmViewController.swift in Sources */,
+				A70D33011F58C6A600BD1300 /* HUD-ObjectiveC.m in Sources */,
 				CCD8DC371F0DDC3900287068 /* FilmsListVO.swift in Sources */,
 				CC326E681F1B0E5900C0DD7F /* Styles.swift in Sources */,
 				CC51860A1EF38B4100ECB6A2 /* PeopleVO.swift in Sources */,
@@ -517,11 +546,14 @@
 			baseConfigurationReference = 88D7B961E8BFD3D49E77B89D /* Pods-StarWarsApi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 87TEAXQ585;
 				INFOPLIST_FILE = StarWarsApi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GTWinalda.StarWarsApi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StarWarsApi/StarWarsApi-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -531,11 +563,13 @@
 			baseConfigurationReference = 89524EB4E5FF3F7D2ED8707C /* Pods-StarWarsApi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 87TEAXQ585;
 				INFOPLIST_FILE = StarWarsApi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GTWinalda.StarWarsApi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StarWarsApi/StarWarsApi-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
